@@ -1,54 +1,57 @@
-<div align="center">
-  
-  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/grilli)
-  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/grilli?style=social)
-  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/grilli?style=social)
-[![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee_?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee_)
-  [![YouTube Video Views](https://img.shields.io/youtube/views/CjVGp5kGHxA?style=social)](https://youtu.be/CjVGp5kGHxA)
+Riley's Hot Kitchen is a live restaurant in Cape Town that offers a seamless online ordering experience through its e-commerce website. Developed using HTML, CSS, JavaScript, PHP, and SQLMyAdmin, this platform allows customers to browse the menu, customize their orders, and process payments efficiently. The integration of various APIs enhances functionality, ensuring a user-friendly experience.
 
-  <br />
-  <br />
+Features
+Intuitive Interface: Easy navigation for menu browsing and order customization.
+Online Ordering: Customers can place orders directly from the website.
+Payment Processing: Secure online payment options integrated with third-party payment APIs.
+Order Tracking: Real-time tracking of orders for customers.
+Responsive Design: Optimized for both desktop and mobile devices.
+Technologies Used
+Front-End:
+HTML
+CSS
+JavaScript
+Back-End:
+PHP
+SQLMyAdmin
+APIs: Various APIs for form submissions and payment processing.
+Installation
+To set up the project locally, follow these steps:
 
-  <h2 align="center">Grilli - Restaurant Website</h2>
+Clone the Repository:
 
-  Grilli is a fully responsive restaurant website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
+bash
+Copy code
+git clone <repository-url>
+cd riley-hot-kitchen
+Set Up the Database:
 
-  <a href="https://codewithsadee.github.io/grilli/"><strong>➥ Live Demo</strong></a>
+Import the SQL file located in the database folder into your SQLMyAdmin.
+Configure the Environment:
 
-</div>
+Update the database connection settings in the config.php file.
+Run the Application:
 
-<br />
+Open your web server and navigate to the project directory.
+Access the website through your browser at http://localhost/riley-hot-kitchen.
+User Experience
+The development of this project has significantly enhanced my skills in:
 
-### Demo Screeshots
+Front-end web development
+API integration
+User experience design
+By providing a digital solution for Riley's Hot Kitchen, the project aims to improve customer engagement and streamline restaurant operations.
 
-![Grilli Desktop Demo](./readme-images/desktop.png "Desktop Demo")
+Contributing
+Contributions are welcome! Please submit a pull request for any improvements or enhancements.
 
-### Prerequisites
+License
+This project is licensed under the MIT License.
 
-Before you begin, ensure you have met the following requirements:
+Contact
+For inquiries, please contact:
 
-* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
+Your Name
+Email: princezachariah3@gmail.com
 
-### Run Locally
 
-To run **Grilli** locally, run this command on your git bash:
-
-Linux and macOS:
-
-```bash
-sudo git clone https://github.com/codewithsadee/grilli.git
-```
-
-Windows:
-
-```bash
-git clone https://github.com/codewithsadee/grilli.git
-```
-
-### Contact
-
-If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
-
-### License
-
-[MIT](https://choosealicense.com/licenses/mit/)
