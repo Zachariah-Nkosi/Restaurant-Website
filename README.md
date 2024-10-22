@@ -49,9 +49,8 @@ License
 This project is licensed under the MIT License.
 
 Contact
-For inquiries, please contact:
+For inquiries, please contact me using the email below: 
 
-Your Name
 Email: princezachariah3@gmail.com
 
 
