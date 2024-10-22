@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riley's Kitchen</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #6495ED, #ffffff); /* Gradient background */
+            color: #333;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Text shadow */
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+            animation: fadeIn 0.5s ease forwards;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li:hover {
+            transform: translateY(-3px);
+        }
+
+        button {
+            padding: 8px 5px;
+            margin: 0 5px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .total-price {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+            color: black;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Text shadow */
+            font-weight: bold;
+        }
+
+        /* Add Item styles */
+        .add-item {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .add-item select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+
+        .add-item button {
+            margin-top: 10px;
+        }
+
+        .quantity {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+            
+        }
+
+        .quantity button {
+            font-size: 20px;
+            padding: 5px 10px;
+            margin: 0 5px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .quantity button:hover {
+            background-color: #0056b3;
+        }
+
+        .item-details {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .item-name {
+            margin-right: 20px;
+            font-size: 18px;
+        }
+
+        .item-price {
+            min-width: 100px;
+            text-align: right;
+            margin-right: 20px;
+            font-size: 18px;
+        }
+
+        .total-price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .unit-price{
+            text-align: right;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Center container */
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Riley's Kitchen</h1>
+    <div class="add-item">
+        <select id="itemSelection">
+            <option value=" "></option>
+            <option value="1/4 Chicken">1/4 Chicken</option>
+            <option value="10 Hot chicken winglets">10 Hot chicken winglets</option>
+            <option value="20 winglets">20 winglets</option>
+            <option value="Chicken Strips">Chicken Strips</option>
+            <option value="Chicken tenders Loaded Fries">Chicken tenders Loaded Fries</option>
+            <option value="Hot Chicken Tenders">Hot Chicken Tenders</option>
+            <option value="Hot Chicken Tender Sandwich">Hot Chicken Tender Sandwich</option>
+            <option value="Loaded Chicken Dorrito Tray">Loaded Chicken Dorrito Tray</option>
+            <option value="Hot Cheeto Tenders">Hot Cheeto Tenders</option>
+            <option value="Hot Chicken Tender Sub">Hot Chicken Tender Sub</option>
+        </select>
+        <button onclick="addItem()">Add Item</button>
+    </div>
+    <ul id="clickedItemsList"></ul>
+    <div class="total-price" id="totalPrice"></div>
+    <div class="button-container">
+        <button onclick="clearLocalStorage()">Clear Cart</button>
+        <button id="checkoutLink" onclick="continueToCheckout()">Continue to Checkout</button>
+        <div style="width: 160px">
+            
+            <a href="https://pay.ikhokha.com/nkosi-contributions/buy/zachariah" style="text-decoration: none">
+                <div style="overflow: hidden; display: flex; justify-content: center; align-items: center; width: 100%; height: 48px; background: #FFCD00; color: #1D1D1B; border: 1px solid #e5e5e5; box-shadow: 1px solid #e5e5e5; border-radius: 16px; font-family: roboto-medium, sans-serif; font-weight: 700;">
+                    Order Now!
+                </div>
+            </a>
+            
+        </div>
+    </div>
+    <!-- New button container -->
+    <script>
+        // Function to update the displayed list of clicked items
+        function displayClickedItems() {
+            var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+            var clickedItemsList = document.getElementById('clickedItemsList');
+            var totalPrice = 0;
+            // Clear the current list
+            clickedItemsList.innerHTML = '';
+            // Populate the list with the updated clicked items
+            for (var itemName in clickedItems) {
+                var count = clickedItems[itemName];
+                var price = getItemPrice(itemName);
+                var itemTotal = parseFloat(price.slice(1)) * count; // Remove 'R' and convert to number
+                totalPrice += itemTotal;
+                var li = document.createElement('li');
+                li.innerHTML = `
+                    <div class="item-details">
+                        <div class="item-name">${itemName}
+                        <div class="quantity">
+                            <button onclick="adjustQuantity('${itemName}', -1)">-</button>
+                            <span>${count}</span>
+                            <button onclick="adjustQuantity('${itemName}', 1)">+</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="item-price">${price.slice(1)}
+                    <div class="unit-price">R${itemTotal.toFixed(2)}</div></div>
+                `;
+                clickedItemsList.appendChild(li);
+            }
+            // Update total price
+            document.getElementById('totalPrice').textContent = `Total Amount: R${totalPrice.toFixed(2)}`;
+            // Update payment link with total amount
+            document.getElementById('checkoutLink').href = `https://pay.ikhokha.com/nkosi-contributions/mpr/zachariah/payment/create-multiple-payments?amount=${totalPrice.toFixed(2)}`;
+        }
+
+        // Function to get the price of an item based on its name
+        function getItemPrice(itemName) {
+            switch (itemName) {
+                case '1/4 Chicken':
+                    return 'R78.99';
+                case '10 Hot chicken winglets':
+                    return 'R99.99';
+                case " ":
+                    return "0";
+                case '20 winglets':
+                    return 'R178.99';
+                case 'Chicken Strips':
+                    return 'R69.00';
+                case 'Chicken tenders Loaded Fries':
+                    return 'R130.00';
+                case 'Hot Chicken Tenders':
+                    return 'R130.00';
+                case 'Hot Chicken Tender Sandwich':
+                    return 'R99.00';
+                case 'Loaded Chicken Dorrito Tray':
+                    return 'R150.00';
+                case 'Hot Cheeto Tenders':
+                    return 'R139.00';
+                case 'Hot Chicken Tender Sub':
+                    return 'R129.00';
+                default:
+                    return 'Price not available';
+            }
+        }
+
+        // Function to add or remove items from the cart
+        function adjustQuantity(itemName, quantityChange) {
+            var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+            if (clickedItems[itemName]) {
+                clickedItems[itemName] += quantityChange;
+                if (clickedItems[itemName] <= 0) {
+                    delete clickedItems[itemName];
+                }
+            }
+            localStorage.setItem('clickedItems', JSON.stringify(clickedItems));
+            // Update the displayed list
+            displayClickedItems();
+        }
+
+        // Function to add an item to the cart
+        function addItem() {
+            var selectedItem = document.getElementById('itemSelection').value;
+            var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+            if (clickedItems[selectedItem]) {
+                clickedItems[selectedItem] += 1;
+            } else {
+                clickedItems[selectedItem] = 1;
+            }
+            localStorage.setItem('clickedItems', JSON.stringify(clickedItems));
+            // Update the displayed list
+            displayClickedItems();
+        }
+
+        // Function to remove an item from the cart
+        function removeItem(itemName) {
+            var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+            if (clickedItems[itemName] > 1) {
+                clickedItems[itemName] -= 1;
+            } else {
+                delete clickedItems[itemName];
+            }
+            localStorage.setItem('clickedItems', JSON.stringify(clickedItems));
+            // Update the displayed list
+            displayClickedItems();
+        }
+
+        // Function to clear the local storage
+        function clearLocalStorage() {
+            localStorage.removeItem('clickedItems');
+            // Clear the displayed list
+            var clickedItemsList = document.getElementById('clickedItemsList');
+            clickedItemsList.innerHTML = '';
+            // Clear total price
+            document.getElementById('totalPrice').textContent = '';
+        }
+
+        // Function to continue to checkout
+        // Function to continue to checkout
+function continueToCheckout() {
+    // Redirect to the actual checkout page or open it in a new tab
+    window.location.href = 'https://pay.ikhokha.com/nkosi-contributions/mpr/zachariah/payment/create-multiple-payments?amount=' + document.getElementById('totalPrice').textContent.split(':')[1].trim();
+}
+
+            // You can redirect to the checkout page or perform any other necessary action here
+        
+
+        // Load clicked items from local storage and display them
+        window.onload = function () {
+            displayClickedItems();
+        };
+    </script>
+</body>
+
+</html>

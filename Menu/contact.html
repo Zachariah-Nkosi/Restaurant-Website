@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <link rel="stylesheet" href="stylecontact.css">
+    <title>Riley's kitchen</title>
+</head>
+
+<body>
+    <header>
+        <a href="index.html"><img src="imgs\the_logo.png" alt="Riley's Kitchen Logo"></a>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="index.html">Menu</a>
+        <a href="contact.html">Contact</a>
+        <a href="#">Our Branches</a>
+    </nav>
+
+    <section id="contact">
+        <h2>Give us feedback</h2>
+        <p>Have a question or suggestion? Reach out to us!</p>
+
+        <div class="contact-info">
+            <p><strong>Address:</strong> 6A 28 Main Road Rondebosch</p>
+            <p><strong>Phone:</strong> 081 644 8172</p>
+            <p><strong>Email:</strong> info@rileyskitchen.com</p>
+        </div>
+
+        <form method="post">
+            <div class="form-group">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+
+            <!-- Add a subject input field -->
+            <div class="form-group">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+
+            <button type="button" id="submitBtn">Submit</button>
+
+        </form>
+    </section>
+
+    <script>
+        var btn = document.getElementById('submitBtn');
+        btn.addEventListener('click', function (e) {
+            e.preventDefault();
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+            var body = 'Name: ' + name + '<br/> Email: ' + email + '<br/> Subject: ' + subject + '<br/> Message: ' + message;
+
+            Email.send({
+                SecureToken: "94e4fb8c-8877-4016-9928-69ddb93e436f",
+                To: 'princezachariah3@gmail.com',
+                From: "princezachariah3@gmail.com",
+                Subject: "CONTACT MESSAGE",
+                Body: body
+            }).then(
+                message => alert(message)
+            );
+        });
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Riley's Kitchen. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

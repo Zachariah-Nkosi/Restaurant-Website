@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chickenstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-/GSB4BOH+FfK+PUAeVMFJ7GRhC4MWvOZ5AC+ZMVZ+ZAN0GW20VuyO7rQ+6g+X+g3tCR1x6CYNQjcUE9E2fMieQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Riley's kitchen</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html"><img src="imgs\logo_final.PNG" alt="Riley's Kitchen Logo"></a>
+                <a href="https://www.ubereats.com/za/store/rileys-hot-chicken/ElAjSg_oSg2RGatkSG6p_w?diningMode=DELIVERY&ps=1&sc=SEARCH_SUGGESTION" class="small-logo"><img src="imgs\uber.png" alt="Uber Eats Logo"></a>
+                <a href="https://order.mrdfood.com/order/restaurant/27304/menu/2001771" class="small-logo"><img src="imgs\Mr.PNG" alt="Mr D Food Logo"></a>
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Our Branches</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home">
+        <h2>Burger Classics</h2>
+        <p>Experience the art of culinary delight in a warm and inviting atmosphere.</p>
+        <a href="index.html">Back To Menu</a>
+    </section>
+
+    <a href="#" class="set2">Proceed to checkout?</a>
+
+    <div class="image-grid">
+        <!-- Grid item 1 -->
+        <div class="grid-item" id="gridItem7">
+            <a href="#" onclick="incrementCounter('clickCount7', 'Farmstyle Beef Burger')">
+                <img src="imgs\Beef Burger.jpg" alt="Image 1">
+            </a>
+            <div class="description">
+                <h4>Farmstyle Beef Burger</h4>
+                <h5>Beef patty, double cheese, smokey mayo</h5>
+                <p>R99.00</p>
+                <p>Selected: <span id="clickCount7">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount7', 'Farmstyle Beef Burger')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge7"></div>
+        </div>
+
+        <!-- Grid item 2 -->
+        <div class="grid-item" id="gridItem8">
+            <a href="#" onclick="incrementCounter('clickCount8', 'Farmstyle Chicken Burger')">
+                <img src="imgs\chickenburg.jpg" alt="Image 2">
+            </a>
+            <div class="description">
+                <h4>Farmstyle Chicken Burger</h4>
+                <h5>Chicken patty, double cheese, smokey mayo</h5>
+                <p>R99.00</p>
+                <p>Selected: <span id="clickCount8">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount8', 'Farmstyle Chicken Burger')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge8"></div>
+        </div>
+
+        <!-- Grid item 3 -->
+        <div class="grid-item" id="gridItem9">
+            <a href="#" onclick="incrementCounter('clickCount9', 'Chick Slow')">
+                <img src="imgs\coleslaw.jpg" alt="Image 3">
+            </a>
+            <div class="description">
+                <h4>Chick Slow</h4>
+                <h5>Chicken patty, coleslaw, mayo</h5>
+                <p>R99.00</p>
+                <p>Selected: <span id="clickCount9">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount9', 'Chick Slow')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge9"></div>
+        </div>
+
+        <!-- Grid item 4 -->
+        <div class="grid-item" id="gridItem10">
+            <a href="#" onclick="incrementCounter('clickCount10', 'Chick Slows')">
+                <img src="imgs\Double Banger.jpg" alt="Image 4">
+            </a>
+            <div class="description">
+                <h4>Double Banger</h4>
+                <h5>Double beef pattie, double cheese, smokey mayo</h5>
+                <p>R129.00</p>
+                <p>Selected: <span id="clickCount10">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount10', 'Chick Slows')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge10"></div>
+        </div>
+
+        <!-- Grid item 5 -->
+        <div class="grid-item" id="gridItem11">
+            <a href="#" onclick="incrementCounter('clickCount11', 'Farmstyle Chicken Burgers')">
+                <img src="imgs\Tripple Banger.jpg" alt="Image 5">
+            </a>
+            <div class="description">
+                <h4>Tripple Banger</h4>
+                <h5>Tripple beef pattie, double cheese, smokey mayo</h5>
+                <p>R149.00</p>
+                <p>Selected: <span id="clickCount11">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount11', 'Farmstyle Chicken Burgers')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge11"></div>
+        </div>
+
+        <!-- Grid item 6 -->
+        <div class="grid-item" id="gridItem12">
+            <a href="#" onclick="incrementCounter('clickCount12', 'Farmstyle Beef Burgers')">
+                <img src="imgs\Farm Burger.jpg" alt="Image 6">
+            </a>
+            <div class="description">
+                <h4>Farm Burger</h4>
+                <h5>Beef patty, egg, bacon lettuce, onion and tomato, cheese, smokey mayo</h5>
+                <p>R149.00</p>
+                <p>Selected: <span id="clickCount12">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount12', 'Farmstyle Beef Burgers')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge12"></div>
+        </div>
+
+        <div class="grid-item" id="gridItem13">
+            <a href="#" onclick="incrementCounter('clickCount13', 'Chicken tenders Loaded Fries')">
+                <img src="imgs\tender3.jpg" alt="Image 7">
+            </a>
+            <div class="description">
+                <h4>Philly Cheese Beef/Chicken</h4>
+                <h5>Panini Roll, Chilli mince or grilled chicken, onion, double cheese</h5>
+                <p>R139.00</p>
+                <p>Selected: <span id="clickCount13">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount13', 'Chicken tenders Loaded Fries')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge13"></div>
+        </div>
+    </div>
+
+    <section id="footer">
+        <img src="imgs\logo 4.jpeg" class="footer-img">
+        <div class="title-text">
+            <p></p>
+            <h1>Visit us Today</h1>
+        </div>
+
+        <div class="footer-row">
+            <div class="footer-left">
+                <h2>Opening hours </h2>
+                <p><i class="fa fa-clock-o"></i>Monday to Friday - 12pm to 23:59pm</p>
+                <p><i class="fa fa-clock-o"></i>Saturdays - 12pm to 23:59pm</p>
+                <p><i class="fa fa-clock-o"></i>Sundays - 12pm to 22:00pm</p>
+            </div>
+
+            <div class="footer-right">
+                <h2>Get In Touch</h2>
+                <p>@Rondebosch 7700 <i class="fa fa-map-marker"></i></p>
+                <p>Riley@gmail.com <i class="fa fa-paper-plane"></i></p>
+                <p>+27 21 345 6789 <i class="fa fa-phone"></i></p>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/profile.php?id=61551855991224"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/rileyshotchicken/"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="https://wa.me/c/27816448172"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+            <p>Copyright protected</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Riley's Kitchen. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to update the badge count
+        function updateBadge(itemId, count) {
+            var badge = document.getElementById('badge' + itemId);
+            if (badge) {
+                badge.textContent = count;
+                badge.style.display = count > 0 ? 'block' : 'none';
+            }
+        }
+
+        // Function to increment the counter and store the clicked item in local storage
+        function incrementCounter(counterId, itemName) {
+            var counter = document.getElementById(counterId);
+            var count = parseInt(counter.textContent);
+            counter.textContent = count + 1;
+            updateBadge(counterId.slice(-1), count + 1);
+
+            // Retrieve previously clicked items from local storage
+            var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+            // Increment count for the clicked item
+            clickedItems[itemName] = (clickedItems[itemName] || 0) + 1;
+            // Store updated clicked items in local storage
+            localStorage.setItem('clickedItems', JSON.stringify(clickedItems));
+        }
+
+        // Function to decrement the counter and update local storage
+        function decrementCounter(counterId, itemName) {
+            var counter = document.getElementById(counterId);
+            var count = parseInt(counter.textContent);
+            if (count > 0) {
+                counter.textContent = count - 1;
+                updateBadge(counterId.slice(-1), count - 1);
+
+                // Retrieve previously clicked items from local storage
+                var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+                // Decrement count for the clicked item
+                clickedItems[itemName] = (clickedItems[itemName] || 0) - 1;
+                // Store updated clicked items in local storage
+                localStorage.setItem('clickedItems', JSON.stringify(clickedItems));
+            }
+        }
+
+        // Update badge counts on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+            Object.keys(clickedItems).forEach(function (itemName) {
+                var count = clickedItems[itemName];
+                if (count > 0) {
+                    var itemId = itemName.replace(/\s+/g, '-').toLowerCase(); // Generate a valid HTML id
+                    updateBadge(itemId, count);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

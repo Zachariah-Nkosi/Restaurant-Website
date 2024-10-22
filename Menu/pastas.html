@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chickenstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-/GSB4BOH+FfK+PUAeVMFJ7GRhC4MWvOZ5AC+ZMVZ+ZAN0GW20VuyO7rQ+6g+X+g3tCR1x6CYNQjcUE9E2fMieQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Riley's kitchen</title>
+</head>
+<body>
+<header>
+    <div class="header-content">
+        <div class="logo">
+            <a href="index.html"><img src="imgs\logo_final.PNG" alt="Riley's Kitchen Logo"></a>
+            <a href="https://www.ubereats.com/za/store/rileys-hot-chicken/ElAjSg_oSg2RGatkSG6p_w?diningMode=DELIVERY&ps=1&sc=SEARCH_SUGGESTION" class="small-logo"><img src="imgs\uber.png" alt="Uber Eats Logo"></a>
+            <a href="https://order.mrdfood.com/order/restaurant/27304/menu/2001771" class="small-logo"><img src="imgs\Mr.PNG" alt="Mr D Food Logo"></a>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="contact.html">Contact</a>
+            <a href="#">Our Branches</a>
+        </nav>
+    </div>
+</header>
+
+<section id="home">
+    <h2>Delicious Pastas</h2>
+    <p>Experience the art of culinary delight in a warm and inviting atmosphere.</p>
+    <a href="index.html">Back To Menu</a>
+</section>
+
+<a href="#" class="set2">Proceed to checkout?</a>
+
+<div class="image-grid">
+    <div class="grid-item" id="gridItem25">
+        <a href="#" onclick="incrementCounter('clickCount25', 'Alforno')">
+            <img src="imgs\Pasta1.jpg" alt="Image 1">
+        </a>
+        <div class="description">
+            <h4>Alforno</h4>
+            <h5>Chicken, mushrooms, cream with fettuccini or penne</h5>
+            <p>R149.00</p>
+            <p>Selected: <span id="clickCount25">0</span></p>
+            <button class="button" onclick="decrementCounter('clickCount25','Alforno')">Remove item!</button>
+        </div>
+        <div class="badge" id="badge25"></div>
+    </div>
+
+    <div class="grid-item" id="gridItem26">
+        <a href="#" onclick="incrementCounter('clickCount26', 'Alfredo')">
+            <img src="imgs\pasta2.jpg" alt="Image 2">
+        </a>
+        <div class="description">
+            <h4>Alfredo</h4>
+            <h5>Chicken, mushrooms, cream with fettuccini or penne</h5>
+            <p>R149.00</p>
+            <p>Selected: <span id="clickCount26">0</span></p>
+            <button class="button" onclick="decrementCounter('clickCount26','Alfredo')">Remove item!</button>
+        </div>
+        <div class="badge" id="badge26"></div>
+    </div>
+
+    <div class="grid-item" id="gridItem27">
+        <div class="overlay">
+            <a href="#" onclick="incrementCounter('clickCount27', 'Chicken Curry Pasta')">
+                <img src="imgs\pastas.jpg" alt="Image 3">
+            </a>
+        </div>
+        <div class="description">
+            <h4>Chicken Curry Pasta</h4>
+            <h5>Chicken, tomato, secret spices with fettuccini or Penne</h5>
+            <p>R139.00</p>
+            <p>Selected: <span id="clickCount27">0</span></p>
+            <button class="button" onclick="decrementCounter('clickCount27','Chicken Curry Pasta')">Remove item!</button>
+        </div>
+        <div class="badge" id="badge27"></div>
+    </div>
+</div>
+
+<section id="footer">
+    <img src="imgs\logo 4.jpeg" class="footer-img">
+    <div class="title-text">
+    <p></p>
+    <h1>Visit us Today</h1>
+    </div>
+    
+    <div class="footer-row">
+        <div class="footer-left">
+            <h2>Opening hours </h2>
+            <p><i class="fa fa-clock-o"></i>Monday to Friday - 12pm to 23:59pm</p>
+            <p><i class="fa fa-clock-o"></i>Saturdays - 12pm to 23:59pm</p>
+            <p><i class="fa fa-clock-o"></i>Sundays - 12pm to 22:00pm</p>
+        </div>
+        <div class="footer-right">
+            <h2>Get In Touch</h2>
+            <p>@Rondebosch 7700 <i class="fa fa-map-marker"></i></p>
+            <p>Riley@gmail.com <i class="fa fa-paper-plane"></i></p>
+            <p>+27 21 345 6789 <i class="fa fa-phone"></i></p>
+        </div>
+    </div>
+
+    <div class="social-links"> 
+        <a href="https://www.facebook.com/profile.php?id=61551855991224"><ion-icon name="logo-facebook"></ion-icon></a>
+        <a href="https://www.instagram.com/rileyshotchicken/"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+        <a href="https://wa.me/c/27816448172"><ion-icon name="logo-whatsapp"></ion-icon></a>
+        <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+        <p>Copyright protected</p>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</section>
+
+<footer>
+    <p>&copy; 2023 Riley's Kitchen. All rights reserved.</p>
+</footer>
+
+<script>
+    // Function to update the badge count
+    function updateBadge(itemId, count) {
+        var badge = document.getElementById('badge' + itemId);
+        if (badge) {
+            badge.textContent = count;
+            badge.style.display = count > 0 ? 'block' : 'none';
+        }
+    }
+
+    // Function to increment the counter and store the clicked item in local storage
+    function incrementCounter(counterId, itemName) {
+        var counter = document.getElementById(counterId);
+        var count = parseInt(counter.textContent);
+        counter.textContent = count + 1;
+        updateBadge(counterId.slice(-2), count + 1);
+
+        // Retrieve previously clicked items from local storage
+        var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+        // Increment count for the clicked item
+        clickedItems[itemName] = (clickedItems[itemName] || 0) + 1;
+        // Store updated clicked items in local storage
+        localStorage.setItem('clickedItems', JSON.stringify(clickedItems));
+    }
+
+    // Function to decrement the counter and update local storage
+    function decrementCounter(counterId, itemName) {
+        var counter = document.getElementById(counterId);
+        var count = parseInt(counter.textContent);
+        if (count > 0) {
+            counter.textContent = count - 1;
+            updateBadge(counterId.slice(-2), count - 1);
+
+            // Retrieve previously clicked items from local storage
+            var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+            // Decrement count for the clicked item
+            clickedItems[itemName] = (clickedItems[itemName] || 0) - 1;
+            // Store updated clicked items in local storage
+            localStorage.setItem('clickedItems', JSON.stringify(clickedItems));
+        }
+    }
+
+    // Update badge counts on page load
+    document.addEventListener('DOMContentLoaded', function () {
+        var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+        Object.keys(clickedItems).forEach(function (itemName) {
+            var count = clickedItems[itemName];
+            if (count > 0) {
+                var itemId = itemName.replace(/\s+/g, '-').toLowerCase(); // Generate a valid HTML id
+                updateBadge(itemId, count);
+            }
+        });
+    });
+</script>
+</body>
+</html>

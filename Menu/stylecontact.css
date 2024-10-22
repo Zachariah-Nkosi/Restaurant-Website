@@ -1,0 +1,100 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: black;
+    color: red;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    width: 300px;
+
+}
+
+nav {
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
+    
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-weight: bold;
+            display: inline-block;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+            background-color: #555;
+            color: red; /* Yellow on hover */
+        }
+
+section {
+    margin: 20px;
+}
+
+h2 {
+    color: #e74c3c; /* Reddish color, adjust as needed */
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #3498db; /* Blue color, adjust as needed */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9; /* Darker blue on hover, adjust as needed */
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333; /* Footer background color, adjust as needed */
+    color: white;
+}

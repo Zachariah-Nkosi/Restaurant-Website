@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chickenstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-/GSB4BOH+FfK+PUAeVMFJ7GRhC4MWvOZ5AC+ZMVZ+ZAN0GW20VuyO7rQ+6g+X+g3tCR1x6CYNQjcUE9E2fMieQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <title>Riley's kitchen</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <a href="index.html"><img src="imgs\logo_final.PNG" alt="Riley's Kitchen Logo"></a>
+                <a href="https://www.ubereats.com/za/store/rileys-hot-chicken/ElAjSg_oSg2RGatkSG6p_w?diningMode=DELIVERY&ps=1&sc=SEARCH_SUGGESTION" class="small-logo"><img src="imgs\uber.png" alt="Riley's Kitchen Logo"></a>
+                <a href="https://order.mrdfood.com/order/restaurant/27304/menu/2001771" class="small-logo"><img src="imgs\Mr.PNG" alt="Riley's Kitchen Logo"></a>
+            </div>
+
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="contact.html">Contact</a>
+                <a href="#">Our Branches</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <section id="home">
+        <h2>Hot Chicken Options Only</h2>
+        <p>Experience the art of culinary delight in a warm and inviting atmosphere.</p>
+        <a href="../index.html">Back To Menu</a></div>
+    </section>
+
+    <a href="pract.html" class="set2">Place an Order?</a>
+    
+    <div class="image-grid">
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount1', '1/4 Chicken')">
+                <img src="imgs\14.jpg" alt="Image 1">
+            </a>
+            
+            <div class="description">
+                <h4>1/4 Chicken</h4>
+                <h5>Fire grilled chicken, Fries<br> and choice of basting - BBQ or Peri Peri</h5>
+                <p>R78.99</p>
+                <p>Selected: <span id="clickCount1">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount1', '1/4 Chicken')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge1"></div>
+        </div>
+        
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount2', '10 Hot chicken winglets')">
+                <img src="imgs\chick1.jpeg" alt="Image 2">
+            </a>
+            <div class="description">
+                <h4>10 Hot chicken winglets</h4>
+                <h5>Fire grilled winglets, Fries<br> and choice of basting - BBQ or Peri Peri</h5>
+                <p>R99.99</p>
+                <p>Selected: <span id="clickCount2">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount2', '10 Hot chicken winglets')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge2"></div>
+        </div>
+        
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount3', '20 winglets')">
+                <img src="imgs\chick1.jpeg" alt="Image 3">
+            </a>
+            <div class="description">
+                <h4>20 winglets</h4>
+                <h5>Fire grilled winglets, Fries<br> and choice of basting - BBQ or Peri Peri</h5>
+                <p>R178.99</p>
+                <p>Selected: <span id="clickCount3">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount3', '20 winglets')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge3"></div>
+        </div>
+        
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount4', 'Chicken Strips')">
+                <img src="imgs\strips1.jpg" alt="Image 4">
+            </a>
+            <div class="description">
+                <h4>Chicken Strips</h4>
+                <h5>Fire grilled winglets, Fries<br> and choice of basting - BBQ or Peri Peri</h5>
+                <p>R69.00</p>
+                <p>Selected: <span id="clickCount4">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount4', 'Chicken Strips')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge4"></div>
+        </div>
+        
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount5', 'Chicken tenders Loaded Fries')">
+                <img src="imgs\tender3.jpg" alt="Image 5">
+            </a>
+            <div class="description">
+                <h4>Chicken tenders Loaded Fries</h4>
+                <h5>Crumbled chicken cut ups with cheese sauce,<br>chilli mayo, mushroom sauce.</h5>
+                <p>R130.00</p>
+                <p>Selected: <span id="clickCount5">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount5', 'Chicken tenders Loaded Fries')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge5"></div>
+        </div>
+        
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount6', 'Hot Chicken Tenders')">
+                <img src="imgs\tender1.jpg" alt="Image 6">
+            </a>
+            <div class="description">
+                <h4>Hot Chicken Tenders</h4>
+                <h5>Grilled hanger steak with<br>sweet potato and vegetables</h5>
+                <p>R130.00</p>
+                <p>Selected: <span id="clickCount6">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount6', 'Hot Chicken Tenders')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge6"></div>
+        </div>
+        
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount7', 'Chicken tenders Loaded Fries')">
+                <img src="imgs\tender3.jpg" alt="Image 7">
+            </a>
+            <div class="description">
+                <h4>Chicken tenders Loaded Fries</h4>
+                <h5>Crumbled chicken cut ups with cheese sauce,<br>chilli mayo, mushroom sauce.</h5>
+                <p>R130.00</p>
+                <p>Selected: <span id="clickCount7">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount7', 'Chicken tenders Loaded Fries')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge7"></div>
+        </div>
+        
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount8', 'Hot Chicken Tenders')">
+                <img src="imgs\tender1.jpg" alt="Image 8">
+            </a>
+            <div class="description">
+                <h4>Hot Chicken Tenders</h4>
+                <h5>Grilled hanger steak with<br>sweet potato and vegetables</h5>
+                <p>R130.00</p>
+                <p>Selected: <span id="clickCount8">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount8', 'Hot Chicken Tenders')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge8"></div>
+        </div>
+        
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount9', 'Hot Chicken Tender Sandwich')">
+                <img src="imgs\burg.jpeg" alt="Image 9">
+            </a>
+            <div class="description">
+                <h4>Hot Chicken Tender Sandwich</h4>
+                <h5>Crumbled chicken tenders tossed in a Peri-Peri, chilli mayo<br>bbq, mushroom sauce with chips.</h5>
+                <p>R99.00</p>
+                <p>Selected: <span id="clickCount9">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount9', 'Hot Chicken Tender Sandwich')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge9"></div>
+        </div>
+        
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount10', 'Loaded Chicken Dorrito Tray')">
+                <img src="imgs\tray1.jpg" alt="Image 10">
+            </a>
+            <div class="description">
+                <h4>Loaded Chicken Dorrito Tray</h4>
+                <h5>Dorrito, fries, crumbed chicken sliced with chilli mayo and <br> cheese sauce</h5>
+                <p>R150.00</p>
+                <p>Selected: <span id="clickCount10">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount10', 'Loaded Chicken Dorrito Tray')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge10"></div>
+        </div>
+
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount11', 'Hot Cheeto Tenders')">
+                <img src="imgs\cheeto1.jpg" alt="Image 11">
+            </a>
+            <div class="description">
+                <h4>Hot Cheeto Tenders</h4>
+                <h5>Chicken tenders crumbed chicken sliced with chilli mayo and cheese sauce</h5>
+                <p>R139</p>
+                <p>Selected: <span id="clickCount11">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount11', 'Hot Cheeto Tenders')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge11"></div>
+        </div>
+        
+        <div class="grid-item">
+            <a href="#" onclick="incrementCounter('clickCount12', 'Hot Chicken Tender Sub')">
+                <img src="imgs\sub.jpg" alt="Image 12">
+            </a>
+            <div class="description">
+                <h4>Hot Chicken Tender Sub</h4>
+                <h5>Crumbed chicken cut tenders, chilli mayo and cheese sauce served with chips</h5>
+                <p>R129</p>
+                <p>Selected: <span id="clickCount12">0</span></p>
+                <button class="button" onclick="decrementCounter('clickCount12', 'Hot Chicken Tender Sub')">Remove item!</button>
+            </div>
+            <div class="badge" id="badge12"></div>
+        </div>
+        
+
+    </div>
+
+    
+    <section id="footer">
+        <img src="imgs\logo 4.jpeg" class="footer-img">
+        <div class="title-text">
+        <p>CONTACT</p>
+        <h1>Visit us Today</h1>
+        </div>
+        
+        <div class="footer-row">
+        
+        
+         <div class="footer-left">
+          <h2>Opening hours </h2>
+           <p><i class = "fa fa-clock-o"></i>Monday to Friday - 12pm to 23:59pm</p>
+            <p><i class = "fa fa-clock-o"></i>Sartudays - 12pm to 23:59pm</p>
+            <p><i class = "fa fa-clock-o"></i>Sundays - 12pm to 22:00pm</p>
+          
+        
+        </div>
+        
+        
+         <div class="footer-right">
+         <h2>Get In Touch</h2>
+        <p>@Rondebosch 7700 <i class = "fa fa-map-marker"></i></p>
+            <p>Riley@gmail.com<i class = "fa fa-paper-plane"></i></p>
+            <p>+27 21 345 6789<i class = "fa fa-phone"></i></p>
+        
+        
+         </div>
+        </div>
+    
+        <div class="social-links"> 
+            <a href="https://www.facebook.com/profile.php?id=61551855991224"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="https://www.instagram.com/rileyshotchicken/"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="https://wa.me/c/27816448172"><ion-icon name="logo-whatsapp"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+            <p>Copyright protected</p>
+        </div>
+    
+        <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+     
+    </section>
+        <footer>
+            <p>&copy; 2023 Riley's Kitchen. All rights reserved.</p>
+        </footer>
+    </body>
+
+    <script>
+
+ // Function to update the badge count
+function updateBadge(itemId, count) {
+    var badge = document.getElementById('badge' + itemId);
+    if (badge) {
+        badge.textContent = count;
+        badge.style.display = count > 0 ? 'block' : 'none';
+    }
+}
+
+// Function to increment the counter and store the clicked item in local storage
+function incrementCounter(counterId, itemName) {
+    var counter = document.getElementById(counterId);
+    var count = parseInt(counter.textContent);
+    counter.textContent = count + 1;
+    updateBadge(counterId.slice(-1), count + 1);
+
+    // Retrieve previously clicked items from local storage
+    var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+    // Increment count for the clicked item
+    clickedItems[itemName] = (clickedItems[itemName] || 0) + 1;
+    // Store updated clicked items in local storage
+    localStorage.setItem('clickedItems', JSON.stringify(clickedItems));
+}
+
+// Function to decrement the counter and update local storage
+function decrementCounter(counterId, itemName) {
+    var counter = document.getElementById(counterId);
+    var count = parseInt(counter.textContent);
+    if (count > 0) {
+        counter.textContent = count - 1;
+        updateBadge(counterId.slice(-1), count - 1);
+
+        // Retrieve previously clicked items from local storage
+        var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+        // Decrement count for the clicked item
+        clickedItems[itemName] = (clickedItems[itemName] || 0) - 1;
+        // Store updated clicked items in local storage
+        localStorage.setItem('clickedItems', JSON.stringify(clickedItems));
+    }
+}
+
+// Update badge counts on page load
+document.addEventListener('DOMContentLoaded', function () {
+    var clickedItems = JSON.parse(localStorage.getItem('clickedItems')) || {};
+    Object.keys(clickedItems).forEach(function (itemName) {
+        var count = clickedItems[itemName];
+        if (count > 0) {
+            var itemId = itemName.replace(/\s+/g, '-').toLowerCase(); // Generate a valid HTML id
+            updateBadge(itemId, count);
+        }
+    });
+});
+
+
+
+    </script>
+    
+    </html>
+
+
+    
+
+    
+

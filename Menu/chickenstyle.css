@@ -1,0 +1,1224 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.5), black), url("burg.jpeg"); /* Add the path to your background image */
+    background-size:cover; /* Set the background image to cover the entire viewport */
+    background-position: center; /* Center the background image vertically and horizontally */
+    background-attachment: fixed; /* Make the background image fixed */  
+    animation: moveBackground 20s linear infinite; /* Apply animation */
+}
+
+/* Keyframes for background motion */
+@keyframes moveBackground {
+    from { background-position: 0 0; }
+    to { background-position: 100% 100%; }
+}
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 99%;
+    background-color: black;
+    padding: 10px;
+    z-index: 2000; /* Set a high z-index to keep header on top */
+}
+
+.header-content {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Align items with space between them */
+    align-items: center; /* Center items vertically */
+}
+
+
+
+
+
+
+.logo {
+    display: flex; /* Use flexbox to arrange items horizontally */
+     
+}
+
+.logo a {
+    margin-right: 20px; /* Adjust spacing between images */
+}
+.logo img {
+    width: 90px;
+    height: auto;
+    display: block;
+    margin-top: -10px;
+    
+}
+
+.small-logo {
+    width: 60px; /* Adjust the width as needed */
+    margin-top: 25px;
+
+}
+
+nav a {
+    margin-right: 20px; /* Adjust spacing between navigation links */
+    text-decoration: none;
+    color: white; /* Adjust link color */
+    font-weight: bold; /* Make the font bold */
+    
+}
+
+
+nav a:hover {
+            background-color: black;
+            color: red; /* Yellow on hover */
+        }
+
+/* Hero Section */
+
+
+
+
+.moving-word {
+    position: absolute;
+    white-space: nowrap;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    animation: moveLeftToRight 5s linear infinite;
+}
+
+
+.main-heading {
+    margin-bottom: 10px; /* Add some space between heading and tagline */
+}
+
+.home-content {
+    padding-top: 50px; /* Add some top padding for content positioning */
+}
+
+#home h2 {
+    position: relative; /* Establish the positioning context */
+    font-size: 46px; /* Set the font size for a bold statement */
+    padding-top: 80px; /* Adjust top padding to create space and position it downwards */
+    color: red; /* Make the text pop with a bold red color */
+    z-index: 1; /* Ensure the heading appears above other elements */
+    /* Add more styles below to make it visually appealing */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Choose a modern and readable font */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a subtle text shadow for depth */
+    letter-spacing: 1px; /* Increase letter spacing for a stylish touch */
+    transition: color 0.3s ease-in-out; /* Add a smooth color transition for a dynamic effect */
+    text-transform: uppercase; /* Convert text to uppercase for a bold look */
+    line-height: 1.4; /* Set line height for better readability */
+    text-align: center; /* Center-align text for a clean presentation */
+    background-color: #f8f8f8; /* Add a subtle background color for contrast */
+    border-radius: 8px; /* Round the corners for a modern touch */
+    border-bottom: 5px solid #ff6969;
+    display: inline-block;
+}
+
+#home p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+
+#home h2 {
+    animation: moveLeftToRight 10s linear infinite;
+    
+}
+
+#home {
+    text-align: center;
+    padding: 25px; /*Adjust the padding as needed*/
+    background-color: #f8f8f8; /* Background color for the section, adjust as needed */
+    width:100%;
+    color: #333; /* Text color, adjust as needed */
+    z-index: 1000;
+    
+}
+
+#home h2 {
+    font-size: 80px; 
+    color: #e74c3c; /* Reddish color adjustment*/
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for a subtle effect */
+    margin-top: -10px;
+}
+
+#home p {
+    font-size: 18px; /* Adjust the font size as needed */
+    line-height: 1.6; /* Adjust the line height as needed */
+}
+
+#home a{
+    color: red;
+    
+    
+    
+}
+
+#home a {
+    display: inline-block;
+    padding: 8px 17px;
+    text-decoration: none;
+    background-color: #FF4500; /* Set your desired background color */
+    color: #fff; /* Set your desired text color */
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out;
+    
+}
+
+#home .second-last {
+    padding-left: 80px; /* Adjust as needed */
+}
+
+#home a:hover {
+    background-color: #FF6347; /* Set a slightly different color for hover effect */
+}
+
+#home.hidden {
+    transform: translateY(-100%);
+  }
+
+.set2 {
+   display: inline-block;
+   padding: 8px 14px;
+   text-decoration: none;
+   background-color: #FF4500; /* Set your desired background color */
+   color: #fff; /* Set your desired text color */
+   border-radius: 8px;
+   transition: background-color 0.3s ease-in-out;
+   margin-left: 100px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+
+    }
+
+
+ol{
+    margin-top: 100px;
+    
+}
+h1 {
+    font-size: 44px;
+    color: white;
+    margin-left:30px;
+    
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    position: relative;
+}
+
+
+.fixed-menu {
+    position: fixed;
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 999; 
+    padding: 20px;
+}
+
+
+.fixed-menu h1 {
+    margin-top: 10; 
+    color: yellow;
+}
+
+
+
+
+li {
+    margin: 10px 30px;
+    text-decoration: underline;
+    font-weight: bold;  
+}
+
+a {
+    color: yellow;
+    font-weight: bold;
+    font-size: 24px;
+    transition: color 0.3s ease-in-out;
+    font-family: Lora, sans-serif;  
+}
+
+a:hover {
+    color: white;
+    transform: translateX(5px)
+}
+
+.set-name {
+    text-align: center;
+    font-weight: bold;
+    margin-top: -400px;
+    color: white
+}
+
+.name { 
+    margin-left: 500px;
+    margin-top:-10px;
+    color: white;
+}
+
+.images{
+    margin-top: 410px;
+
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px; /* Add space between sets of grids */
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%; /* Adjust the max-height as needed */
+}
+
+
+
+.grid-item {
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 500px;
+    
+}
+
+.grid-item::after {
+    content: attr(data-clicks);
+    position: absolute;
+    top: 465px; /* Adjust as needed */
+    right: 10px; /* Adjust as needed */
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: none;
+    font-size: 12px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.grid-item.clicked::after {
+    display: block;
+}
+
+
+
+
+
+/* Style for the "Remove Item" button */
+.button {
+    background-color: #ff6347; /* Red */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.badge {
+    display: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red; /* Change color as per your design */
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.button:hover {
+    background-color: #d9534f; /* Darker red */
+}
+
+
+.grid-item img {
+    width: 100%; /* Make images fill the container width */
+    height: auto;
+    max-height: 100%;
+}
+
+
+.overlay {
+    position: relative;
+}
+
+.overlay img {
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+    filter: brightness(40%); /* Adjust brightness as needed */
+}
+
+.view-more {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+    text-align: center;
+    opacity: 0; /* Set initial opacity to 1 */
+    z-index: 2; /* Ensure a higher z-index */
+    transition: opacity 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.grid-item:hover .view-more {
+    opacity: 2; /* Change opacity to 1 on hover */
+}
+
+.description {
+    padding:15px;
+    text-align: center;
+
+    
+}
+
+h4 {
+    margin: 0;
+    color: white;
+    font-weight: bold;
+}
+
+h5 {
+    color: red;
+    padding-top:-100px ;
+    
+
+}
+
+
+
+
+p {
+    margin: 0;
+    color: #666;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+/* Contact Section */
+
+#footer{
+    padding:100px 0 20px;
+    background-color:black;
+    position:relative;
+    z-index: 2000;
+}
+
+.title-text{
+    text-align:center;
+    padding-bottom:70px;
+    
+
+}
+
+.title-text p{
+    margin: auto;
+    font-size:20px;
+    color:#009688;
+    font-weight: bold;
+    position:relative;
+    z-index:1;
+    display:inline-block;
+    
+}
+
+.footer-row{
+    width:80%;
+    margin:0 auto;
+    display:flex;
+    justify-content:space-between ;
+    flex-wrap:wrap;
+    color: lightgray;
+}
+
+.footer-right{
+    text-align: right;
+}
+
+.footer-row h1{
+    margin: 10px 0;
+    
+    
+    
+}
+
+.fouter-row p{
+    line-height: 35px;
+
+    
+}
+ 
+.footer-left.fa,.footer-right .fa{
+    font-size:20px;
+    color:#009688;
+    margin: 10px;
+}
+
+.footer-img{
+    max-width:510px;
+    opacity:0.5;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    
+}
+
+.social-links{
+    text-align:center;
+    size:10px;
+    
+}
+
+.social-links a{
+    color:red;
+    size:5px;
+    
+    
+}
+
+
+.social-links p{
+    font-size:12px;
+    margin-top:20px;
+}
+
+
+
+
+/* Footer Section */
+footer {
+    background-color: #444;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Responsive Design */
+
+@media (min-width: 300px) and (max-width: 385px) {
+    header{
+        padding: 5px;
+        height:60px;
+    }
+    .logo a{
+        margin-right: 10px;
+        width:35px;
+        margin-top:25px;
+    } 
+
+    nav a{
+        padding-top: 30px;
+        margin-right: 8px;
+        font-size: 10px;
+        
+    }
+
+    #home{
+        text-align: center;
+        padding: 15px;
+    }
+
+    #home h2{
+        font-size: 30px;
+        padding-top: 70px;
+        margin-left: -30px;
+       
+
+    }
+
+    #home p{
+        font-size: 12px;
+    }
+
+  
+
+    #home a{
+        padding:6px 12px;
+        margin-top: 10px;
+        margin-left:-280px;
+        font-size: 15px;
+        
+    }
+
+    .set2{
+        padding: 4px 7px;
+        text-align: center;
+        font-size: 17px;
+        margin-left: 20px;
+
+    }
+    
+ 
+
+    .image-grid{
+        margin-left: 9px;
+        gap: 2px;
+    }
+
+
+    .grid-item img{
+        height:120px;
+        width: 100%;
+
+    }
+
+
+    .grid-item{
+        height:250px;
+        width: 120px;
+    }
+
+
+    .description {
+        padding:0px;
+        font-size: 11px;
+    }
+
+    .description h4{
+        font-size: 10px;
+        font-weight: bolder;
+        margin-bottom: -10px;
+        
+        }
+
+    .description h5{
+        margin-bottom: 5px;
+        }
+
+    .description p{
+        font-size: 8px;
+            }
+
+    .button{
+        font-size: 8px;
+        padding:6px 5px;
+        margin-bottom: 0px;
+    
+    }
+
+    #footer{
+    padding:50px 0 25px;
+    background-color:black;
+    position:relative;
+    z-index: 2000;
+}
+
+.footer-img{
+    width:120px;
+    opacity:0.5;
+    position:absolute;
+    left:50%;
+    top:40%;
+    transform:translate(-50%,-50%);
+    
+}
+
+.title-text p{
+    font-size: 13px;
+   
+    
+}
+
+.footer-row{
+    font-size: 8px;
+    
+}
+
+.title-text h1{
+    font-size: 18px;
+    margin-top: -45px;
+    color: blue;
+    
+    
+}
+
+.footer-left{
+    margin-left: -30px;
+    margin-top: -80px;
+    font-size: 6px;
+}
+
+.footer-right{
+    margin-right: -30px;
+    margin-top: -80px;
+}
+
+.footer-right p{
+    margin-bottom: -10px;
+    margin-right: -20px;
+    font-size: 6px;
+}
+
+.footer-right h2{
+    margin-bottom: -1px;
+}
+
+.social-links p{
+    font-size:5px;
+    margin-top:0px;
+    margin-bottom: -20px;
+}
+
+footer{
+    font-size: 10px;
+}
+}
+
+
+@media (min-width: 386px) and (max-width: 431px) and (min-height: 667px) {
+    header{
+        padding: 5px;
+        height:60px;
+        
+    }
+    .logo a{
+        margin-right: 10px;
+        width:35px;
+        margin-top:25px;
+    } 
+
+    nav a{
+        padding-top: 30px;
+        margin-right: 8px;
+        font-size: 14px;
+        
+    }
+
+    #home{
+        text-align: center;
+        padding: 15px;
+        
+    }
+
+    #home h2{
+        font-size: 31px;
+        padding-top: 70px;
+        margin-left: -30px;
+        
+       
+
+    }
+
+    #home p{
+        font-size: 13px;
+    }
+
+  
+
+    #home a{
+        padding:6px 12px;
+        margin-top: 10px;
+        margin-left:-280px;
+        font-size: 16px;
+        
+    }
+
+    .set2{
+        padding: 4px 7px;
+        text-align: center;
+        font-size: 17px;
+        margin-left: 12px;
+
+    }
+    
+ 
+
+    .image-grid{
+        margin-left: 12px;
+        gap: 1px;
+        width:100%;
+        max-width: 800px;
+        
+        
+    }
+
+
+    .grid-item img{
+        height:120px;
+        width: 100%;
+
+    }
+
+
+    .grid-item{
+        height:255px;
+        width: 135px;
+    }
+
+
+    .description {
+        padding:0px;
+        font-size: 11px;
+    }
+
+    .description h4{
+        font-size: 11px;
+        font-weight: bolder;
+        margin-bottom: -10px;
+        
+        }
+
+    .description h5{
+        margin-bottom: 5px;
+        }
+
+    .description p{
+        font-size: 9px;
+            }
+
+    .button{
+        font-size: 9px;
+        padding:6px 5px;
+        margin-bottom: 0px;
+    
+    }
+
+    #footer{
+    padding:50px 0 25px;
+    background-color:black;
+    position:relative;
+    z-index: 2000;
+}
+
+.footer-img{
+    width:125px;
+    opacity:0.5;
+    position:absolute;
+    left:50%;
+    top:40%;
+    transform:translate(-50%,-50%);
+    
+}
+
+.title-text p{
+    font-size: 14px;
+   
+    
+}
+
+.footer-row{
+    font-size: 9px;
+    
+}
+
+.title-text h1{
+    font-size: 19px;
+    margin-top: -45px;
+    color: blue;
+    
+    
+}
+
+.footer-left{
+    margin-left: -30px;
+    margin-top: -80px;
+    font-size: 6px;
+}
+
+.footer-right{
+    margin-right: -30px;
+    margin-top: -80px;
+}
+
+.footer-right p{
+    margin-bottom: -10px;
+    margin-right: -20px;
+    font-size: 6px;
+}
+
+.footer-right h2{
+    margin-bottom: -1px;
+}
+
+.social-links p{
+    font-size:5px;
+    margin-top:0px;
+    margin-bottom: -20px;
+}
+
+footer{
+    font-size: 10px;
+}
+}
+
+
+@media (min-width: 432px) and (max-width: 767px) and (min-height: 667px) {
+    header{
+        padding: 5px;
+        height:60px;
+    }
+    .logo a{
+        margin-right: 10px;
+        width:45px;
+        margin-top:25px;
+    } 
+
+    nav a{
+        padding-top: 30px;
+        margin-right: 8px;
+        font-size: 14px;
+        
+    }
+
+    #home{
+        text-align: center;
+        padding: 15px;
+    }
+
+    #home h2{
+        font-size: 40px;
+        padding-top: 70px;
+        margin-left: -30px;
+       
+
+    }
+
+    #home p{
+        font-size: 17px;
+    }
+
+  
+
+    #home a{
+        padding:6px 12px;
+        margin-top: 10px;
+        margin-left:-400px;
+        font-size: 20px;
+        
+    }
+
+    .set2{
+        padding: 8px 10px;
+        text-align: center;
+        font-size: 20px;
+        margin-left: 20px;
+
+    }
+    
+ 
+
+    .image-grid{
+        margin-left: 8px;
+        gap: 2px;
+        width:100%;
+        
+    }
+
+
+    .grid-item img{
+        height:120px;
+        width: 100%;
+
+    }
+
+
+    .grid-item{
+        height:230px;
+        width: 180px;
+    }
+
+
+    .description {
+        padding:0px;
+        font-size: 11px;
+    }
+
+    .description h4{
+        font-size: 11px;
+        font-weight: bolder;
+        margin-bottom: -10px;
+        
+        }
+
+    .description h5{
+        margin-bottom: 5px;
+        }
+
+    .description p{
+        font-size: 9px;
+            }
+
+    .button{
+        font-size: 9px;
+        padding:6px 5px;
+        margin-bottom: 0px;
+    
+    }
+
+    #footer{
+    padding:200px 0 25px;
+    background-color:black;
+    position:relative;
+    z-index: 2000;
+}
+
+.footer-img{
+    width:125px;
+    opacity:0.5;
+    position:absolute;
+    left:50%;
+    top:40%;
+    transform:translate(-50%,-50%);
+    
+}
+
+.title-text p{
+    font-size: 14px;
+   
+    
+}
+
+.footer-row{
+    font-size: 9px;
+    
+}
+
+.title-text h1{
+    font-size: 19px;
+    margin-top: -180px;
+    color: blue;
+    
+    
+}
+
+.footer-left{
+    margin-left: -30px;
+    margin-top: -80px;
+    font-size: 9px;
+}
+
+.footer-right{
+    margin-right: -30px;
+    margin-top: -80px;
+    font-size: 9px;
+}
+
+.footer-right p{
+    margin-bottom: -10px;
+    margin-right: -20px;
+    font-size: 8px;
+}
+
+.footer-right h2{
+    margin-bottom: -1px;
+}
+
+.social-links p{
+    font-size:5px;
+    margin-bottom: 0px;
+}
+
+footer{
+    font-size: 12px;
+}
+}
+
+
+
+
+@media (min-width: 767px) and (max-width: 1100px) and (min-height: 667px) {
+    header{
+        padding: 5px;
+        height:60px;
+    }
+    .logo a{
+        margin-right: 10px;
+        width:45px;
+        margin-top:25px;
+    } 
+
+    nav a{
+        padding-top: 30px;
+        margin-right: 8px;
+        font-size: 14px;
+        
+    }
+
+    #home{
+        text-align: center;
+        padding: 15px;
+    }
+
+    #home h2{
+        font-size: 65px;
+        padding-top: 70px;
+    
+        
+       
+
+    }
+
+    #home p{
+        font-size: 20px;
+    }
+
+  
+
+    #home a{
+        padding:10px 18px;
+        margin-top: 10px;
+        margin-left:-600px;
+        font-size: 25px;
+        
+    }
+
+    .set2{
+        padding: 12px 15px;
+        text-align: center;
+        font-size: 25px;
+        margin-left: 20px;
+
+    }
+    
+ 
+
+    .image-grid{
+        margin-left: 20px;
+        gap: 2px;
+        width:100%;
+        
+    }
+
+
+    .grid-item img{
+        height:120px;
+        width: 100%;
+
+    }
+
+
+    .grid-item{
+        height:260px;
+        width: 250px;
+    }
+
+
+    .description {
+        padding:0px;
+        font-size: 15px;
+    }
+
+    .description h4{
+        font-size: 11px;
+        font-weight: bolder;
+        margin-bottom: -10px;
+        
+        }
+
+    .description h5{
+        margin-bottom: 5px;
+        }
+
+    .description p{
+        font-size: 15px;
+            }
+
+    .button{
+        font-size: 15px;
+        padding:6px 5px;
+        margin-bottom: 0px;
+    
+    }
+
+    #footer{
+    padding:200px 0 25px;
+    background-color:black;
+    position:relative;
+    z-index: 2000;
+}
+
+.footer-img{
+    width:125px;
+    opacity:0.5;
+    position:absolute;
+    left:50%;
+    top:40%;
+    transform:translate(-50%,-50%);
+    
+}
+
+.title-text p{
+    font-size: 14px;
+   
+    
+}
+
+.footer-row{
+    font-size: 9px;
+    
+}
+
+.title-text h1{
+    font-size: 19px;
+    margin-top: -180px;
+    color: blue;
+    
+    
+}
+
+.footer-left{
+    margin-left: -30px;
+    margin-top: -80px;
+    font-size: 9px;
+}
+
+.footer-right{
+    margin-right: -30px;
+    margin-top: -80px;
+    font-size: 9px;
+}
+
+.footer-right p{
+    margin-bottom: -10px;
+    margin-right: -20px;
+    font-size: 8px;
+}
+
+.footer-right h2{
+    margin-bottom: -1px;
+}
+
+.social-links p{
+    font-size:5px;
+    margin-bottom: 0px;
+}
+
+footer{
+    font-size: 12px;
+}
+}
+
+
+
+
